@@ -1,0 +1,29 @@
+
+
+  .centered-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+    text-align: center;
+  }
+    
+   
+    .md-card {
+      z-index: 1;
+      padding: 40px;
+      width: 100%;
+      max-width: 900px;
+      position: relative;
+    }
+
+    .node {
+      cursor: pointer;
+    }
+    
+    .node:hover {
+      stroke: #000;
+      stroke-width: 1.5px;
+    }
+    
