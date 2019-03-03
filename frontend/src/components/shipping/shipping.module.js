@@ -7,7 +7,12 @@ export default {
         loading: false,
         shipData: [],
         height: 600,
-        width: 600
+        width: 600,
+        errMsg:"",
+        showSnackbar: false,
+        position: 'center',
+        duration: 2000,
+        isInfinity: false
       };
     },
     created() {
@@ -28,7 +33,6 @@ export default {
         shipChart.padding(20);
         const output = shipChart(this.chartData).descendants();
         return output.map((d, i) => {
-          console.log(d);
           let label = "";
             if(d.depth == 1 ){
               label = "source_id"
@@ -83,6 +87,13 @@ export default {
           .then(response => {
             this.loading = false;
             this.shipData = response.data;
+          }).catch(() => {
+            this.errMsg = "Connection Error. Redirecting To Login."
+            this.showSnackbar = true;
+            this.loading = false;
+            setTimeout(()=>{
+              this.$router.push('login');
+            },2000);  
           });
     }
   }

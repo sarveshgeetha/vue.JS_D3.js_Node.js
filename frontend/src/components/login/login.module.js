@@ -11,7 +11,12 @@ export default {
         user: {
           email: "",
           password: ""
-        }
+        },
+        errMsg:"",
+        showSnackbar: false,
+        position: 'center',
+        duration: 2000,
+        isInfinity: false
       };
     },
     methods: {
@@ -25,6 +30,10 @@ export default {
               this.loading = false;
               this.$router.push('shipping');
             }
+          }).catch(() => {
+            this.errMsg = "Connection Error. Please Try Again After Sometime."
+            this.showSnackbar = true;
+              this.loading = false;
           });
       }
     }

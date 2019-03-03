@@ -26,6 +26,10 @@
           </div>
         </md-button>
       </div>
+      <md-snackbar :md-position="position" :md-duration="isInfinity ? Infinity : duration" :md-active.sync="showSnackbar" md-persistent>
+        <span>{{errMsg}}</span>
+        <md-button class="md-primary" @click="showSnackbar = false">close</md-button>
+    </md-snackbar>
     </md-content>
   </div>
 </template>
