@@ -19,4 +19,4 @@ Prototype Developed with the below Stack :
 	 - Vue.Js (Frontend)
 	 - Postgres (DB)
  - Once the container is up and running, hit the below URL in browser
-	 > localhost:8080
+	 > http://localhost:8080 (or) http://127.0.0.1:8080
