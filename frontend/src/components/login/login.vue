@@ -9,17 +9,17 @@
       <div class="form">
         <md-field>
           <label>E-mail</label>
-          <md-input v-model="user.email" autofocus></md-input>
+          <md-input id="email" type="email" v-model="user.email" autofocus required></md-input>
         </md-field>
 
         <md-field md-has-password>
           <label>Password</label>
-          <md-input v-model="user.password" type="password"></md-input>
+          <md-input id="password" v-model="user.password" type="password" required></md-input>
         </md-field>
       </div>
 
       <div class="actions md-layout">
-        <md-button class="md-raised md-primary" @click="auth">
+        <md-button type="submit" class="md-raised md-primary" @click="auth">
           <span v-if="!loading"> Log in</span>
           <div class="loading-overlay" v-if="loading">
             <md-progress-spinner  class="md-accent" :md-diameter="30" md-mode="indeterminate" :md-stroke="3"></md-progress-spinner>

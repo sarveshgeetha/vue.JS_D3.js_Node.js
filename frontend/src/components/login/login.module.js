@@ -1,5 +1,4 @@
 import  axios  from 'axios';
-
 export default {
     name: 'Login',
     props: {
@@ -21,20 +20,27 @@ export default {
     },
     methods: {
       auth() {
-        this.loading = true;
-        axios
-          .get('http://localhost:4000/login')
-          .then(response => {
-            if(response.data == 'success')
-            {
-              this.loading = false;
-              this.$router.push('shipping');
-            }
-          }).catch(() => {
-            this.errMsg = "Connection Error. Please Try Again After Sometime."
-            this.showSnackbar = true;
-              this.loading = false;
-          });
+        if(this.user.email=="" || this.user.password=="")
+        {
+          this.errMsg = "Invalid Email Id / Password."
+          this.showSnackbar = true;
+        }
+        else{
+          this.loading = true;
+          axios
+            .get('http://localhost:4000/login')
+            .then(response => {
+              if(response.data == 'success')
+              {
+                this.loading = false;
+                this.$router.push('shipping');
+              }
+            }).catch(() => {
+              this.errMsg = "Connection Error. Please Try Again After Sometime."
+              this.showSnackbar = true;
+                this.loading = false;
+            });
+        }  
       }
     }
   }
