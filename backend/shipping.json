@@ -1,0 +1,90 @@
+[
+    {
+      "shipment_id": 1,
+      "source_id": "a123",
+      "destination_id": "z789",
+      "weight": 25000,
+      "cost": 250,
+      "new_shipment_id": 1,
+      "new_weight": 25000,
+      "new_cost": 250,
+      "total_tls": 1
+    },
+    {
+      "shipment_id": 2,
+      "source_id": "a123",
+      "destination_id": "z789",
+      "weight": 22000,
+      "cost": 275,
+      "new_shipment_id": 2,
+      "new_weight": 38000,
+      "new_cost": 280,
+      "total_tls": 1
+    },
+    {
+      "shipment_id": 3,
+      "source_id": "a123",
+      "destination_id": "z789",
+      "weight": 16000,
+      "cost": 280,
+      "new_shipment_id": 2,
+      "new_weight": 38000,
+      "new_cost": 280,
+      "total_tls": 1
+    },
+    {
+      "shipment_id": 4,
+      "source_id": "a123",
+      "destination_id": "z789",
+      "weight": 15000,
+      "cost": 295,
+      "new_shipment_id": 3,
+      "new_weight": 15000,
+      "new_cost": 295,
+      "total_tls": 1
+    },
+    {
+      "shipment_id": 5,
+      "source_id": "a123",
+      "destination_id": "z789",
+      "weight": 44000,
+      "cost": 290,
+      "new_shipment_id": 4,
+      "new_weight": 44000,
+      "new_cost": 290,
+      "total_tls": 1
+    },
+    {
+      "shipment_id": 6,
+      "source_id": "a123",
+      "destination_id": "z789",
+      "weight": 22000,
+      "cost": 275,
+      "new_shipment_id": 5,
+      "new_weight": 60000,
+      "new_cost": 560,
+      "total_tls": 2
+    },
+    {
+      "shipment_id": 7,
+      "source_id": "a123",
+      "destination_id": "z789",
+      "weight": 18000,
+      "cost": 275,
+      "new_shipment_id": 5,
+      "new_weight": 60000,
+      "new_cost": 560,
+      "total_tls": 2
+    },
+    {
+      "shipment_id": 8,
+      "source_id": "a123",
+      "destination_id": "z789",
+      "weight": 20000,
+      "cost": 285,
+      "new_shipment_id": 5,
+      "new_weight": 60000,
+      "new_cost": 560,
+      "total_tls": 2
+    }
+  ]

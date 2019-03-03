@@ -1,7 +1,7 @@
 
+import shipData from './shipping.json';
 const Sequelize = require('sequelize');
-import config from './config.json';
-const sequelize = new Sequelize(`postgres://${config.postgres.user}:${config.postgres.password}@${config.postgres.host}:${config.postgres.port}/${config.postgres.database}`);
+const sequelize = new Sequelize(process.env.DATABASE_URL);
 sequelize
   .authenticate()
   .then(() => {
@@ -53,5 +53,12 @@ total_tls: {
     },]
 })
 };
+ShipmentsDB().sync({ force: true }).then(()=>{
+    ShipmentsDB().bulkCreate(shipData)
+        .then(() => {
+            console.log("Initial Shipping Data Loaded");
+    })
+})
+
 
 module.exports = { ShipmentsDB };

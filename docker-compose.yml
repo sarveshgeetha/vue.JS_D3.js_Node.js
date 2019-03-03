@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+  postgres:
+    image: postgres
+    environment:
+      - POSTGRES_USER=me
+      - POSTGRES_PASSWORD=root123
+      - POSTGRES_DB=postgres1
+  frontend: 
+    build: frontend 
+    depends_on:
+      - backend
+    ports:
+      - "8080:8080" 
+  backend: 
+    build: backend 
+    environment:
+      DATABASE_URL: postgres://me:root123@postgres/postgres1
+    depends_on:
+      - postgres
+    ports:
+      - "4000:4000"

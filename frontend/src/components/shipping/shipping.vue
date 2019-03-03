@@ -38,7 +38,7 @@
       </md-card-content>
 
       <md-card-actions>
-        <md-button class="md-raised md-primary">Log Out</md-button>
+        <md-button class="md-raised md-primary" @click="$router.push('login')">Log Out</md-button>
       </md-card-actions>
     </md-card>
   </div>
